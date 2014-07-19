@@ -27,3 +27,29 @@ def run_length(input)
 	end
 	new_string
 end
+
+
+
+
+## Another way 
+def string_convertor (string)
+  character = string[0]
+  count = 1
+  new_string = ""
+  (1..(string.length-1)).each do |i|
+    if character == string[i]
+      count += 1
+    else
+      new_string += "#{count}#{character}"
+      character = string[i]
+      count = 1
+    end
+    if i == string.length-1
+      new_string += "#{count}#{character}"
+    end
+  end
+  return new_string
+end
+
+puts "string_convertor(\"aabbbcddaa\") --> #{string_convertor('aabbbcddaa')}"
+
