@@ -9,19 +9,23 @@
 
 array = [
 	{
-		'x' => 3,
-		'y' => 1
+		'x' => 10,
+		'y' => 4
 	},
 	{
-		'x' => 2,
-		'y' => 2
+		'x' => -3,
+		'y' => -1
+	},
+	{
+		'x' => -1,
+		'y' => 0
 	}
 ]
 
 def closest_point(x, y, array)
 	min_distance = distance(x, y, array[0])
 	min_index = 0
-	array.each_with_index do |i|
+	array.each_index do |i|
 		if distance(x, y , array[i]) < min_distance
 			min_distance = distance(x, y, array[i])
 			min_index = i
