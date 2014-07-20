@@ -9,7 +9,7 @@
 
 function palindrome(string) {
 	// guard clause
-	string.split(' ').join('');
+	var string = string.split(' ').join('');
 	if (string.length == 1)  return true;
 	if (string.length == 2 && string[0] == string[1]) {
 		return true;
