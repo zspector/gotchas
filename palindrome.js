@@ -9,15 +9,15 @@
 
 function palindrome(string) {
 	// guard clause
-	string.replace(' ', '');
+	string.split(' ').join('');
 	if (string.length == 1)  return true;
 	if (string.length == 2 && string[0] == string[1]) {
 		return true;
 	}
 	var last = string.length - 1;
 	if (string[0] == string[last]) {
-		string.slice(1, string.length -1);
-		return palindrome(string);
+		var newString = string.slice(1, string.length -1);
+		return palindrome(newString);
 	} else {
 		return false;
 	}
